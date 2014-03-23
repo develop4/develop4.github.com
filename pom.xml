@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>uk.co.develop4.website</groupId>
+	<artifactId>d4-website</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>Develop4 Technologies Website</name>
+	<url>http://www.develop4.co.uk</url>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.jasig.maven</groupId>
+					<artifactId>sass-maven-plugin</artifactId>
+					<version>1.1.0</version>
+					<executions>
+						<execution>
+							<id>package</id>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>update-stylesheets</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<resources>
+							<resource>
+								<source>
+									<directory>${basedir}/stylesheets</directory>
+								</source>
+								<destination>${project.basedir}/site/stylesheets</destination>
+							</resource>
+						</resources>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.1.1</version>
+					<executions>
+						<execution>
+							<id>jekyll</id>
+							<phase>site-deploy</phase>
+							<goals>
+								<goal>exec</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<executable>jekyll</executable>
+						<workingDirectory>${basedir}</workingDirectory>
+						<arguments>
+                            <argument>server</argument>
+                        </arguments>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<organization>
+		<name>Develop4 Technologies Ltd</name>
+		<url>http://www.develop4.co.uk</url>
+	</organization>
+</project>
