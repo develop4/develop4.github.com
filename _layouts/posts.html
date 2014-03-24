@@ -1,0 +1,17 @@
+--- 
+layout: normal 
+title: Blogs
+---
+
+<!-- Main Blog Content -->
+<article>
+	<h3>
+		<a href="#">{{ page.blogtitle }}</a>
+	</h3>
+	<h6>
+		Written by <a href="/team/{{ page.author }}.html">{{ page.author }}</a> on {{ page.date | date: '%B %d, %Y' }}
+	</h6>
+	<div class="row">
+		<div class="large-12 columns">{{ content }}</div>
+	</div>
+</article>
