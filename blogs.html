@@ -1,29 +1,41 @@
 ---
-layout: blogs
+layout: normal
 title: Blogs
 css: blogs
 js: blogs
 permalink: blogs/
-breadcrumb: <a href="/blogs/">blogs</a>
+full_posts: 5
 ---
 
-<div>
-fwefwefcewfvewvewf
-evewvevfewvfwev
-wefvewfvwefvwefvwe
-vwefvewfvef ewvfwefwe fvewvwef wevfvewfvewfvwe 
-</div>
-
-<div>
-fwefwefcewfvewvewf
-evewvevfewvfwev
-wefvewfvwefvwefvwe
-vwefvewfvef ewvfwefwe fvewvwef wevfvewfvewfvwe 
-</div>
-
-<div>
-fwefwefcewfvewvewf
-evewvevfewvfwev
-wefvewfvwefvwefvwe
-vwefvewfvef ewvfwefwe fvewvwef wevfvewfvewfvwe 
-</div>
+{% for post in site.posts %}
+  {% if forloop.index < page.full_posts %}
+  
+		<article>
+			<h3>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</h3>
+			<h6>
+				Written by <a href="#">{{ post.author }}</a> on {{post.date | date: '%B %d, %Y'}}
+			</h6>
+			<div class="row">
+				<div class="columns">{{ post.content }}</div>
+			</div>
+		</article>
+  {% else %}
+    {% if forloop.index == page.full_posts %}
+    	<hr/>
+    	<h3>Older Posts</h3>
+    {% endif %}
+    	<article>
+			<h3>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</h3>
+			<h6>
+				Written by <a href="#">{{ post.author }}</a> on {{post.date | date: '%B %d, %Y'}}
+			</h6>
+			<div class="row">
+				<div class="columns">{{ post.excerpt | strip_html }} ...</div>
+			</div>
+		</article>
+  {% endif %}
+{% endfor %}

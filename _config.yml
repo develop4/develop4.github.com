@@ -1,8 +1,10 @@
 port: 4000
 safe: true
 pygments: false
+lsi: true
+excerpt_separator: <!--more--> 
 
-copyright: Copyright &copy; 2014 Develop4 Technologies Ltd.
+copyright: Copyright &copy; 2014 Develop4 Technologies Ltd., London
 company: Develop4 Technologies Ltd.
 name: Develop4 Technologies Ltd.
 topbartitle: [ Develop4 Technologies ]

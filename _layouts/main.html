@@ -1,10 +1,10 @@
 <!doctype html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">  
   <head>
     {% include html_head.html %}
   </head>
   <body> 
+  	{% include page_branding.html %}
 	<div class="row">
 	  <div class="large-12 columns">
 	    <!-- Navigation -->
@@ -13,7 +13,7 @@
 	      <ul class="title-area">
 	        <!-- Title Area -->
 	        <li class="name">
-	          <h1><a href="#">{{ site.topbartitle }}</a></h1>
+          		<h1>&nbsp;</h1>
 	        </li>
 	        <li class="toggle-topbar menu-icon">
 	          <a href="/"><span>menu</span></a>
@@ -25,6 +25,7 @@
 	                <li {% if page.url == '/index.html' %}class="selected"{% endif %}><a href="/">Home</a></li>
 	                <li {% if page.url == '/projects/index.html' %}class="selected"{% endif %}><a href="/projects/">Projects</a></li>
 	                <li {% if page.url == '/blogs/index.html' %}class="selected"{% endif %}><a href="/blogs/">Blogs</a></li>
+                    <li {% if page.url == '/contact/index.html' %}class="selected"{% endif %}><a href="/contact/">Contact</a></li>
 	            </ul>
 	      </section>
 	    </nav>
