@@ -5,9 +5,9 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Develop4 Technologies</title>
- <link href="http://{{site.host}}:{{site.port}}atom.xml" rel="self"/>
+ <link href="http://develop4.github.io/atom.xml" rel="self"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://{{site.host}}:{{site.port}}</id>
+ <id>http://develop4.github.io</id>
  <author>
    <name>William Timpany</name>
  </author>
@@ -15,9 +15,9 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://{{site.host}}:{{site.port}}{{ post.url }}"/>
+   <link href="http://develop4.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{site.host}}:{{site.port}}{{ post.id }}</id>
+   <id>develop4.github.io{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
