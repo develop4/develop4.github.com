@@ -12,7 +12,15 @@
 			</div>
 			<div class="large-6 columns text-right">
 				<p>
-					<small>Last Modified: {{ page.date | date: '%B %d, %Y' }}{{ post.date | date: '%B %d, %Y' }}</small>
+					<small>
+					Last Modified: 
+						 {% if page.date %}
+						 	{{ page.date | date: '%B %d, %Y' }}
+						 {% endif %}
+						 {% if post.date %}
+						 	{{ post.date | date: '%B %d, %Y' }}
+						 {% endif %}
+					</small>
 				</p>
 			</div>
 		</div>
