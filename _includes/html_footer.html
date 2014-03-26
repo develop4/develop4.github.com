@@ -14,11 +14,10 @@
 				<p>
 					<small>
 					Last Modified: 
-						 {% if page.date %}
-						 	{{ page.date | date: '%B %d, %Y' }}
-						 {% endif %}
 						 {% if post.date %}
 						 	{{ post.date | date: '%B %d, %Y' }}
+						 {% else %}
+						 	{{ page.path | file_date | date: '%B %d, %Y'  }}
 						 {% endif %}
 					</small>
 				</p>
