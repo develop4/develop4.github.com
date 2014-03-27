@@ -1,0 +1,20 @@
+<!-- Navigation -->
+<nav class="top-bar" data-topbar="" data-options="is_hover: false">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name show-for-small-only">
+	<h5 style="padding-top: 3px;">&nbsp;Develop4 Technologies</h5>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu<span></span></a></li>
+  </ul>
+
+  <section class="top-bar-section" >
+    <ul class="left">
+        <li {% if page.url == '/index.html' %}class="selected"{% endif %}><a href="/">Home</a></li>
+        <li {% if page.url == '/Projects/index.html' %}class="selected"{% endif %}><a href="/Projects/">Projects</a></li>
+        <li {% if page.url == '/Blogs/index.html' %}class="selected"{% endif %}><a href="/Blogs/">Blogs</a></li>
+           <li {% if page.url == '/Contact/index.html' %}class="selected"{% endif %}><a href="/Contact/">Contact</a></li>
+    </ul>
+  </section>
+</nav>
+<!-- End Navigation -->

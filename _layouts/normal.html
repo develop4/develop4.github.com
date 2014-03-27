@@ -6,29 +6,8 @@
  <body>
 	{% include page_branding.html %}
 <div class="row">
-  <div class="large-12 columns">
-    <!-- Navigation -->
-
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <h1>&nbsp;</h1>
-        </li>
-        <li class="toggle-topbar menu-icon">
-          <a href="/"><span>menu</span></a>
-        </li>
-      </ul>
-
-      <section class="top-bar-section">
-            <ul class="left">
-                <li {% if page.url == '/index.html' %}class="selected"{% endif %}><a href="/">Home</a></li>
-                <li {% if page.url == '/Projects/index.html' %}class="selected"{% endif %}><a href="/Projects/">Projects</a></li>
-                <li {% if page.url == '/Blogs/index.html' %}class="selected"{% endif %}><a href="/Blogs/">Blogs</a></li>
-                <li {% if page.url == '/Contact/index.html' %}class="selected"{% endif %}><a href="/Contact/">Contact</a></li>
-            </ul>
-      </section>
-    </nav>
+  <div class="large-12 columns white">
+  	{% include nav_bar.html %}
     <div class="breadcrumbs">
   		<span class="before">You are here: </span> 
   			<a href="/{{ page.title }}">{{ page.title }}</a> 
@@ -36,7 +15,6 @@
   				<a href="#">{{ page.blogtitle }}</a> 
   			{% endif %}
   	</div>
-    <!-- End Navigation -->
   </div>
 </div>
 
