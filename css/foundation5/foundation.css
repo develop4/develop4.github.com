@@ -23,34 +23,6 @@ meta.foundation-mq-xxlarge {
 
 meta.foundation-data-attribute-namespace {
   font-family: false; }
-  
-.font-verdana{
-  font-family: "Verdana, Geneva, sans-serif;"
- }
-
-.white {
-    background: white;
-    }
-@media only screen and (min-width: 40.063em) {     
-	.bar-shadow {
-	    background: url(/images/bar_shadow.gif)  12px -1px no-repeat white;
-		}
-	.footer-shadow {	
-		background: url(/images/footer_shadow.gif) no-repeat center bottom #eaf0f4;
-		padding-bottom: 7px;
-		}
-}
-/*	
-@media only screen and (max-width: 40em) { 
-	.bar-shadow {
-	    background: url(/images/bar_shadow_small.gif)  12px -1px no-repeat white;
-		}
-	.footer-shadow {	
-		background: url(/images/footer_shadow_small.gif) no-repeat center bottom #eaf0f4;
-		padding-bottom: 7px;
-	}
-}
-*/
 
 
 

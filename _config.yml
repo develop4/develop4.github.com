@@ -3,6 +3,7 @@ safe: true
 pygments: false
 lsi: true
 excerpt_separator: <!--more--> 
+category-list: [Java, Programming, Rants, Jekyll]
 
 company: Develop4 Technologies
 name: Develop4 Technologies Ltd.

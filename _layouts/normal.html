@@ -20,7 +20,7 @@
 
   <!-- Main Page Content and Sidebar -->
 
-  <div class="row bar-shadow">
+  <div class="row bar-shadow white">
 	<br>
     <!-- Main Main Content -->
 	<div class="large-9 columns" role="content">
@@ -34,19 +34,29 @@
     <aside class="large-3 columns">
 
       <h5>Categories</h5>
-      <ul class="side-nav">
-        <li><a href="#">News</a></li>
-        <li><a href="#">Code</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Fun</a></li>
-        <li><a href="#">Weasels</a></li>
-      </ul>
 
-      <div class="panel">
-        <h5>Featured</h5>
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-        <a href="#">Read More &rarr;</a>
-      </div>
+      <ul class="side-nav">
+		{% for category in site.categories %}
+		  <li><a href="#{{ category | first }}">{{ category | first | capitalize}}</a></li>
+		{% endfor %}
+      </ul>
+      
+      <h5>Articles by Category</h5>
+		<ul class="side-nav">
+		{% for category in site.categories %}
+		  <li ><a name="{{ category | first }}">{{ category | first | capitalize}}</a>
+		  <ul class="no-bullet">
+		    {% for posts in category %}
+		      {% for post in posts %}
+		        {% if post.url != null %}
+		          <li style="margin: 0px; padding-left: 15px; "><a href="{{ post.url }}">{{ post.title }}</a></li>
+		        {% endif %}
+		      {% endfor %}
+		    {% endfor %}
+		    </ul>
+		  </li>
+		{% endfor %}
+		</ul>
 
     </aside>
 
