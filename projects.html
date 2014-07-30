@@ -1,5 +1,5 @@
 ---
-layout: normal
+layout: page
 title: Projects
 css: projects
 js: projects
@@ -8,61 +8,37 @@ permalink: Projects/
 
 <article>
 	<h3>
-		<a href="#Lorem Ipsum">Lorem Ipsum</a>
+		<a href="#Develop4 Web Site">Develop4 Web Site</a>
 	</h3>
 	<div class="row">
 		<div class="large-12 columns">
-			<p>Lorem Ipsum is simply dummy text of the printing and
-				typesetting industry. Lorem Ipsum has been the industry's standard
-				dummy text ever since the 1500s, when an unknown printer took a
-				galley of type and scrambled it to make a type specimen book. It has
-				survived not only five centuries, but also the leap into electronic
-				typesetting, remaining essentially unchanged. It was popularised in
-				the 1960s with the release of Letraset sheets containing Lorem Ipsum
-				passages, and more recently with desktop publishing software like
-				Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>The idea behind the D4 web site was to produce a site that was easy to build and
+			maintain while still providing an good looking interface across multiple devices.  
+			Using existing resources and developer tools was a high priority as web site
+			maintenance and design has a high enough overhead without the additional burden of learning
+			new tools, and setting up new environments, diverting resources from core development tasks. 
+			</p>
+			<p>With those restrictions in mind we decided to use the
+			the Jekyll templating engine to produce a static website, this allowed
+			a flexability in designing the templates for generating the site, while still allowing the creation of
+			additional content with the minimum of effort.   The other advantage of using the Jekyll engine
+			is that Github provides this as part of its service, allowing site content to be managed via
+			source control (git) to and have the site automatically regenerated on every commit.</p>
+			<p>The development/deployment process is fairly simple.  Additional pages or modifications are added
+			to the local developer copy of the site that has been checked out from Github.  The changes
+			are immediatly visible in the local Jekyll server run on the developers environment. As soon as the
+			changes have been tested and verified, they are pushed to the Github site.  This allows developers
+			to use their standard development environment for creating new content and templates, and using Github
+			for storing the source code allows "kills two birds with one stone"; the site source code is securely stored
+			and the web site is automatically generated of the Github servers and published.</p>
+			<dl>
+				<dt>Technologies used</dt>
+				<dd>Jekyll - web site template engine, to create the static website</dd>
+				<dd>Foundation - javascript and css to style and format the site, and provide mobile device compatability.</dd>
+				<dd>JQuery - providing dynamic content support</dd>
+				<dd>Github - source control and web content server.</dd>
+			</dl>
 		</div>
 	</div>
 </article>
 
-<article>
-	<h3>
-		<a href="#Contrary to popular belief">Contrary to popular belief</a>
-	</h3>
-	<div class="row">
-		<div class="large-12 columns">
-			<p>Contrary to popular belief, Lorem Ipsum is not simply random
-				text. It has roots in a piece of classical Latin literature from 45
-				BC, making it over 2000 years old. Richard McClintock, a Latin
-				professor at Hampden-Sydney College in Virginia, looked up one of
-				the more obscure Latin words, consectetur, from a Lorem Ipsum
-				passage, and going through the cites of the word in classical
-				literature, discovered the undoubtable source. Lorem Ipsum comes
-				from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
-				(The Extremes of Good and Evil) by Cicero, written in 45 BC. This
-				book is a treatise on the theory of ethics, very popular during the
-				Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-				amet..", comes from a line in section 1.10.32.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<h3>
-		<a href="#Long established">Long established</a>
-	</h3>
-	<div class="row">
-		<div class="large-12 columns">
-			<p>It is a long established fact that a reader will be distracted
-				by the readable content of a page when looking at its layout. The
-				point of using Lorem Ipsum is that it has a more-or-less normal
-				distribution of letters, as opposed to using 'Content here, content
-				here', making it look like readable English. Many desktop publishing
-				packages and web page editors now use Lorem Ipsum as their default
-				model text, and a search for 'lorem ipsum' will uncover many web
-				sites still in their infancy. Various versions have evolved over the
-				years, sometimes by accident, sometimes on purpose (injected humour
-				and the like).</p>
-		</div>
-	</div>
-</article>
