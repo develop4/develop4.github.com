@@ -1,0 +1,33 @@
+<!-- Sidebar -->
+
+<aside class="large-3 columns">
+
+<h5>Categories</h5>
+
+<ul class="side-nav">
+{% for category in site.categories %}
+  <li><a href="#{{ category | first }}">{{ category | first | capitalize}}</a></li>
+{% endfor %}
+</ul>
+    
+<h5>Articles by Category</h5>
+
+<ul class="side-nav">
+{% for category in site.categories %}
+  <li ><a name="{{ category | first }}">{{ category | first | capitalize}}</a>
+  <ul class="no-bullet">
+    {% for posts in category %}
+      {% for post in posts limit:10 %}
+        {% if post.url != null %}
+          <li style="margin: 0px; padding-left: 15px; "><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
+
+</aside>
+
+<!-- End Sidebar -->

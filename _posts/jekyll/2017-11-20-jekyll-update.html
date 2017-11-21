@@ -1,0 +1,36 @@
+--- 
+layout: posts 
+title: Jekyll Upgrade 
+blogtitle: Jekyll Upgrade
+author: William Timpany 
+categories: [ Jekyll , Programming, Github] 
+---
+<p>
+	Updating Jekyll to use <a href="http://bundler.io/">bundler</a> was a
+	bit more complex than anticipated.
+</p>
+<p>The first item on the agenda was to make sure that my Ruby
+	environment and all the Gems were upto date.
+<ul>
+	<li><code>gem update --system</code></li>
+	<li><code>gem install rails</code></li>
+	<li><code>gem update</code></li>
+</ul>
+</p>
+<p>The next task was to create the Gemfile required by the bundler.
+
+<pre style="font-size: 12px; background-color: #dddddd;">
+source "https://rubygems.org"
+#     bundle exec jekyll serve
+# This is the default theme for new Jekyll sites. You may change this to anything you like.
+gem "minima", "~> 2.0"
+gem "github-pages", group: :jekyll_plugins
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.6"
+end
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+		</pre>
+</ul>
+
+</p>
+

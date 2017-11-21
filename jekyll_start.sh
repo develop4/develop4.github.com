@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/local/bin/jekyll server --watch --trace
+bundle exec jekyll serve --watch --trace
