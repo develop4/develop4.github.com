@@ -1,75 +1,29 @@
 <!doctype html>
-<html class="no-js" lang="en">  
-  <head>
-    {% include html_head.html %}
-  </head>
-  <body> 
-  	{% include page_branding.html %}
-<div class="row">
-  <div class="large-12 columns white">
-  	{% include nav_bar.html %}
-  </div>
-</div>	
+<html⚡>
+<head>
+	{% include head.html %}
+</head>
+<body>
+	<!-- Header Begin -->
+	{% include navbar.html %}
+    <header class="www-header">
+      <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">{{page.title}}</h1>
+      <span class="h3 block mb4 px2 col-12 sm-col-8 mx-auto">{{page.description}}</span>
+    </header>
 
-<div class="row bar-shadow white">
-		
-		<br>
-		  <div class="large-12 small-12 columns">
-		    <div class="row">
-		      <div class="large-3 small-3 columns">
-		        <a class="th radius" href="/">
-		        	<img src="/images/business/business-tech-home.jpg">
-		        </a>
-		        <h6 class="text-center radius" style="background-color: #EAF1F6;">
-		        	<a class="dark-blue"  href="/Blogs"/>Home</a>
-		        </h6>
-		      </div>
-		      <div class="large-3 small-3 columns">
-		        <a class="th radius" href="/Projects">
-		        	<img src="/images/business/business-tech-planning.jpg">
-		        </a>
-		        <h6 class="text-center radius" style="background-color: #EAF1F6;">
-		        	<a class="dark-blue"  href="/Blogs"/>Projects</a>
-		        </h6>
-		      </div>
-		      <div class="large-3 small-3 columns">
-		        <a class="th radius" href="/Blogs">
-		        	<img src="/images/business/business-tech-blogs.jpg">
-		        </a>
-		        <h6 class="text-center radius" style="background-color: #EAF1F6;">
-		        	<a class="dark-blue"  href="/Blogs"/>Blogs</a>
-		        </h6>
-		      </div>
-		      <div class="large-3 small-3 columns">
-		        <a class="radius th" href="/Contact">
-		        	<img src="/images/business/business-tech-contact.jpg">
-		        </a>
-		        <h6 class="text-center radius" style="background-color: #EAF1F6;">
-		       	  <a class="dark-blue" href="/Contacts"/>Contacts</a>
-		        </h6>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+	<!-- Main Main Content -->
+	{{ content }}
+    <!-- End Main Content -->
 	
-	  <div class="large-12 columns">
-	    <div class="row white">
-	    	<br/>
-	      <!-- Content -->
-	
-	      <div class="large-8 columns">
-	        <div class="panel radius">
-	          {{ content }}
-	        </div>
-	      </div>
 	
 	      <div class="large-4 columns">
 
 			      <h5>Latest News</h5>
-			      <img src="/images/news_banner.jpg">
 			      <ul class="side-nav">
 			          {% for post in site.posts limit:10 %}
+			          	{% if post.isproject != true %}
 					      <li><a href="{{ post.url }}">{{ post.title }} &nbsp; ({{post.date | date: '%B %d, %Y'}})</a></li>
+					    {% endif %}
 					  {% endfor %}
 			      </ul>
 	      </div>
@@ -78,6 +32,8 @@
 	  </div>
 	</div>
 
-	{% include html_footer.html %}
-  </body>
+	<!-- Footer Begin-->
+	{% include footer.html %} 
+	<!-- Footer End -->
+</body>
 </html>

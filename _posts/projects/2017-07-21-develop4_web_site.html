@@ -1,0 +1,47 @@
+---
+layout: posts
+title: Develop4 Web Site
+blogtitle: Develop4 Web Site
+author: William Timpany
+categories: [ Projects ]
+description: Jekyll templating engine used to create Google AMP compatible pages.
+isproject: true
+---
+<aside class="www-components-sec-nav col-2 xs-hide sm-hide relative">
+</aside>
+<article class="www-components flex-auto col-10">
+	<section class="www-component-desc">
+		<h2 id="introduction" class="www-heading pb4 mb2 relative h3">Jekyll Used to Create Site.</h2>
+			<p class="mb2 px1">
+			<a class="para-image" href="http://jekyllrb.com/"><img class="th radius" src="/images/projects/jekyll.png"></a>
+			The idea behind the D4 web site was to produce a site that was easy to build and
+			maintain while still providing an good looking interface across multiple devices.  
+			Using existing resources and developer tools was a high priority as web site
+			maintenance and design has a high enough overhead without the additional burden of learning
+			new tools, and setting up new environments, diverting resources from core development tasks. 
+			</p>
+			
+			<!--summary-above-->
+			
+			<p class="mb2 px1">With those restrictions in mind we decided to use the
+			the Jekyll templating engine to produce a static website, this allowed
+			a flexability in designing the templates for generating the site, while still allowing the creation of
+			additional content with the minimum of effort.   The other advantage of using the Jekyll engine
+			is that Github provides this as part of its service, allowing site content to be managed via
+			source control (git) to and have the site automatically regenerated on every commit.</p>
+			
+			<p class="mb2 px1">The development/deployment process is fairly simple.  Additional pages or modifications are added
+			to the local developer copy of the site that has been checked out from Github.  The changes
+			are immediatly visible in the local Jekyll server run on the developers environment. As soon as the
+			changes have been tested and verified, they are pushed to the Github site.  This allows developers
+			to use their standard development environment for creating new content and templates, and using Github
+			for storing the source code allows "kills two birds with one stone"; the site source code is securely stored
+			and the web site is automatically generated of the Github servers and published.</p>
+			
+			<p class="m0 mb4">
+				<a href="https://github.com/develop4/develop4.github.com" class="inline-block">{% include icons/github.svg %}</a>
+				<a href="https://github.com/develop4/develop4.github.com">Develop4 Website project on GitHub</a>
+			</p>
+			
+	</section>
+</article>

@@ -1,0 +1,50 @@
+---
+layout: posts
+title: Tomcat Security Extension
+blogtitle: Tomcat Security Extension
+author: William Timpany
+categories: [ Projects ]
+description: Security extensions project to allow the encryption of settings in the Tomcat 7 configuration files.
+isproject: true
+---
+<aside class="www-components-sec-nav col-2 xs-hide sm-hide relative">
+</aside>
+<article class="www-components flex-auto col-10">
+	<section class="www-component-desc">
+		<h2 id="introduction" class="www-heading pb4 mb2 relative h3">Tomcat Security Extension.</h2>
+		
+			<p class="mb2 px1">
+				Security extensions project to allow the encryption of settings in the Tomcat 7 configuration files.  
+			</p>
+			
+			<!--summary-above-->
+			
+			<p class="mb2 px1">
+				<a class="para-image" href="http://tomcat.apache.org/"><img class="th radius" src="/images/projects/tomcat.png"></a>
+				This new digester allows the separation of Application Credentials and other sensitive information 
+				from the main tomcat configuration files.   The digester configuration, application credentials and 
+				passphrases can all be stored in separate areas under heightened security control.   The plug-able 
+				decryption modules allow for different decryption methods to be employed. The cyphertext is passed 
+				to the appropriate module for decryption based on the namespace prefix of the cyphertext. Each Decoder 
+				Module is associated with a namespace prefix, this namespace prefix is returned from the "getNamespace()" 
+				method on the Module.
+			</p>
+			
+			<p class="mb2 px1">
+				The Decoders default behavior should allow them to work without additional configuration. If the 
+				Decoder does require additional configuration then parameters can be passed from the decoder.properties file.
+			</p>
+			
+			<p class="mb2 px1">
+				At tomcat server startup the decryption modules are initialized. Then as tomcat reads the server 
+				configuration files the custom digester will decrypt the properties and perform variable substitution 
+				of the matched values.
+			</p>
+
+			<p class="m0 mb4">
+				<a href="https://github.com/develop4/tomcat-extension" class="inline-block">{% include icons/github.svg %}</a>
+				<a href="https://github.com/develop4/tomcat-extension">Tomcat Extension project on GitHub</a>
+			</p>
+			
+	</section>
+</article>

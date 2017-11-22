@@ -1,0 +1,37 @@
+<header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
+	<div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger {{^sidebaronly}}md-hide lg-hide{{/sidebaronly}} pr2">☰</div>
+	<a href="/" class="text-decoration-none inline-block mx-auto"> 
+		<div class="h3 bold caps mx-auto {{classes}}">{{ site.company }}</div>
+	</a>
+	<nav class="ampstart-headerbar-nav ampstart-nav xs-hide sm-hide">
+		<ul class="list-reset m0 p0 flex justify-center nowrap">
+			{% for menu in site.data.menu %}
+			<li class="ampstart-nav-item {% if page.title == menu.name %}www-current-page{% endif %}">
+				<a href="{{ menu.url }}" class="text-decoration-none block">{{ menu.name }}</a>
+			</li>
+			{% endfor %}			
+		</ul>
+	</nav>
+</header>
+
+ <amp-sidebar id="header-sidebar" class="ampstart-sidebar px3 flex flex-column md-hide lg-hide" layout="nodisplay">
+   <div class="flex justify-start items-center ampstart-sidebar-header">
+     <a href="#" on="tap:header-sidebar.toggle"class="ampstart-navbar-trigger items-start">✕</a>
+   </div>
+   <nav class="ampstart-sidebar-nav ampstart-nav">
+     {% for menu in site.data.menu %}
+    		<a href="{{ menu.url }}" class="block caps h4 py1 abe-primary {% if page.title == menu.name %}black{% endif %}">{{ menu.name }}</a>
+		{% if menu.submenu %}
+		<ul class="list-reset m0 p0 caps h5">
+          <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+              <ul class="ampstart-dropdown-items list-reset m0 p0">
+              {% for submenu in menu.submenu %}
+                <li class="ampstart-dropdown-item"><a href="{{ submenu.url }}" class="text-decoration-none">- {{ submenu.name }}</a></li>
+              {% endfor %}
+              </ul>
+        	</li>
+        </ul>
+        {% endif %}
+     {% endfor %}
+   </nav>
+ </amp-sidebar>

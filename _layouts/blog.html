@@ -1,40 +1,22 @@
 <!doctype html>
-<html class="no-js" lang="en">
-  <head>
-	{% include html_head.html %}
-  </head>
- <body>
-	{% include page_branding.html %}
-<div class="row">
-  <div class="large-12 columns white">
-  	{% include nav_bar.html %}
-    <div class="breadcrumbs">
-  		<span class="before">You are here: </span> 
-  			<a href="/Blogs">Blogs</a> 
-  			{% if page.blogtitle != null and page.blogtitle != '' %}
-  				<a href="#">{{ page.blogtitle }}</a> 
-  			{% endif %}
-  	</div>
-  </div>
-</div>
-
-  <!-- Main Page Content and Sidebar -->
-
-  <div class="row bar-shadow white">
-	<br>
+<html⚡>
+<head>
+	{% include head.html %}
+</head>
+<body>
+	<!-- Header Begin -->
+	{% include navbar.html %}
+    <header class="www-header">
+      <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">{{page.title}}</h1>
+      <span class="h3 block mb4 px2 col-12 sm-col-8 mx-auto">{{page.description}}</span>
+    </header>
+ 
     <!-- Main Main Content -->
-	<div class="large-9 columns" role="content">
-		{{ content }}
-	</div>
+	{{ content }}
     <!-- End Main Content -->
 
-	{% include html_sidebar.html %}
-
-  </div>
-
-  <!-- End Main Content and Sidebar -->
- 
-	{% include html_footer.html %}
-
-  </body>
+	<!-- Footer Begin-->
+	{% include footer.html %} 
+	<!-- Footer End -->
+</body>
 </html>

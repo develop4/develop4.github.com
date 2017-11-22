@@ -4,80 +4,10 @@ title: Projects
 css: projects
 js: projects
 permalink: Projects/
+description: Projects that showcase various technologies and architectures that are of interest.
 ---
-<article>
-	<h3>
-		<a href="#Develop4 Web Site">Develop4 Web Site</a>
-	</h3>
-	<div class="row">
-		<div class="large-12 columns">
-			<p>
-			<a class="para-image" href="http://jekyllrb.com/"><img class="th radius" src="/images/projects/jekyll.png"></a>
-			The idea behind the D4 web site was to produce a site that was easy to build and
-			maintain while still providing an good looking interface across multiple devices.  
-			Using existing resources and developer tools was a high priority as web site
-			maintenance and design has a high enough overhead without the additional burden of learning
-			new tools, and setting up new environments, diverting resources from core development tasks. 
-			</p>
-			
-			<p>With those restrictions in mind we decided to use the
-			the Jekyll templating engine to produce a static website, this allowed
-			a flexability in designing the templates for generating the site, while still allowing the creation of
-			additional content with the minimum of effort.   The other advantage of using the Jekyll engine
-			is that Github provides this as part of its service, allowing site content to be managed via
-			source control (git) to and have the site automatically regenerated on every commit.</p>
-			<p>The development/deployment process is fairly simple.  Additional pages or modifications are added
-			to the local developer copy of the site that has been checked out from Github.  The changes
-			are immediatly visible in the local Jekyll server run on the developers environment. As soon as the
-			changes have been tested and verified, they are pushed to the Github site.  This allows developers
-			to use their standard development environment for creating new content and templates, and using Github
-			for storing the source code allows "kills two birds with one stone"; the site source code is securely stored
-			and the web site is automatically generated of the Github servers and published.</p>
-			
-			
-			<p>	
-				<a href="https://github.com/develop4/develop4.github.com"><img src="/images/projects/github.png" style="padding-top: 2px; vertical-align: text-top;"> Develop4 Website project on GitHub</a>
-			</p>
-		</div>
-	</div>
-</article>
-<hr/>
-<article>
-	<h3>
-		<a href="#Tomcat Security Extension">Tomcat Security Extension</a>
-	</h3>
-	<div class="row">
-		<div class="large-12 columns">
-			<p>
-				Security extensions project to allow the encryption of settings in the Tomcat 7 configuration files.  
-			</p>
-			<p>
-				<a class="para-image" href="http://tomcat.apache.org/"><img class="th radius" src="/images/projects/tomcat.png"></a>
-				This new digester allows the separation of Application Credentials and other sensitive information 
-				from the main tomcat configuration files.   The digester configuration, application credentials and 
-				passphrases can all be stored in separate areas under heightened security control.   The plug-able 
-				decryption modules allow for different decryption methods to be employed. The cyphertext is passed 
-				to the appropriate module for decryption based on the namespace prefix of the cyphertext. Each Decoder 
-				Module is associated with a namespace prefix, this namespace prefix is returned from the "getNamespace()" 
-				method on the Module.
-			</p>
-			<p>
-				The Decoders default behavior should allow them to work without additional configuration. If the 
-				Decoder does require additional configuration then parameters can be passed from the decoder.properties file.
-			</p>
-			<p>
-				At tomcat server startup the decryption modules are initialized. Then as tomcat reads the server 
-				configuration files the custom digester will decrypt the properties and perform variable substitution 
-				of the matched values.
-			</p>
-			<p>	
-				<a href="https://github.com/develop4/tomcat-extension"><img src="/images/projects/github.png" style="padding-top: 2px; vertical-align: text-top;"> Tomcat Extension project on GitHub</a>
-			</p>
-
-		</div>
-	</div>
-</article>
-
-
-
-
+{% for post in site.posts limit:10 %}
+  {% if post.isproject == true %}
+    <li><a href="{{ post.url }}">{{ post.title }} &nbsp; ({{post.date | date: '%B %d, %Y'}})</a>  <p>{{ post.excerpt | strip_html | truncatewords: 50  }}</p></li>
+  {% endif %}
+{% endfor %}

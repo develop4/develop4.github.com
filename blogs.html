@@ -5,37 +5,57 @@ css: blogs
 js: blogs
 permalink: Blogs/
 full_posts: 5
+description: Latest Blogs with usefull information or discussions on topics of interest.
 ---
 
 {% for post in site.posts %}
   {% if forloop.index < page.full_posts %}
-		<article>
-			<h3>
-				<a href="{{ post.url }}">{{ post.blogtitle }}</a>
-			</h3>
-			<h6>
-				Written by <a href="/team/{{ post.author }}.html">{{ post.author }}</a> on {{post.date | date: '%B %d, %Y'}}
-			</h6>
-			<div class="row">
-				<div class="columns">{{ post.content }}</div>
-			</div>
-		</article>
-		<hr/>
+  	{% if post.isproject != true %}
+		<amp-selector layout="container"> 
+			<main class="flex pl2"> 
+			<aside class="www-components col-2 xs-hide sm-hide relative">
+			</aside>
+			<article class="www-components flex-auto col-10">
+				<section class="www-component-desc">
+					<p class="mb2 px1 left ">
+						<a href="{{ post.url }}" class="h2">{{ post.blogtitle }}</a>
+					</p>
+					<br/>
+					<p class="mb2 px1 right">
+						Written by <a href="/team/{{ page.author }}.html">{{ post.author }}</a>, 
+						on {{ post.date | date: '%B %d, %Y' }}
+					</p>
+				</section>
+			</article>
+			</main> 
+			<main class="flex pl2"> 
+			{{ post.content }}
+			</main>
+		</amp-selector>
+	{% endif %}
   {% else %}
     {% if forloop.index == page.full_posts %}
-    	<hr/>
-    	<h3>Older Posts</h3>
+    	<h2 class="h2">Older Posts</h3>
     {% endif %}
-    	<article>
-			<h3>
-				<a href="{{ post.url }}">{{ post.blogtitle }}</a>
-			</h3>
-			<h6>
-				Written by <a href="/team/{{ post.author }}.html">{{ post.author }}</a> on {{post.date | date: '%B %d, %Y'}}
-			</h6>
-			<div class="row">
-				<div class="columns">{{ post.excerpt | strip_html }} ...</div>
-			</div>
-		</article>
+    		{% if post.isproject != true %}
+		    <amp-selector layout="container"> 
+			<main class="flex pl2"> 
+			<aside class="www-components col-2 xs-hide sm-hide relative">
+			</aside>
+			<article class="www-components flex-auto col-10">
+				<section class="www-component-desc">
+					<a href="{{ post.url }}" class="h2">{{ post.blogtitle }}</a>
+					<p class="mb2 px1 right">
+						Written by <a href="/team/{{ page.author }}.html">{{ post.author }}</a>, 
+						on {{ post.date | date: '%B %d, %Y' }}
+					</p>
+				</section>
+			</article>
+			</main> 
+			<main class="flex pl2"> 
+			{{ post.content | strip_html | truncatewords: 50 }}
+			</main>
+			</amp-selector>
+	{% endif %}
   {% endif %}
 {% endfor %}

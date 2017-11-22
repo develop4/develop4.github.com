@@ -1,0 +1,34 @@
+[
+	{ 
+		"name": "Home",
+		"url":  "/",
+		"desc": "Home"
+	},
+	{ 
+		"name": "Projects",
+		"url":  "/Projects",
+		"desc": "Projects",
+		"submenu": [
+			{ 
+				"name": "Develop4 Web Site",
+				"url":  "/Projects#Develop4 Web Site",
+				"desc": "Develop4 Web Site"
+			},
+			{ 
+				"name": "Tomcat Security",
+				"url":  "/Projects#Tomcat Security Extension",
+				"desc": "Tomcat Security Extension"
+			}
+		]
+	},
+	{
+		"name": "Blogs",
+		"url":  "/Blogs",
+		"desc": "Blog Entries"
+	},
+	{
+		"name": "Contact",
+		"url":  "/Contact",
+		"desc": "Contact Details"
+	}  
+]
