@@ -14,23 +14,6 @@
 	<!-- Main Main Content -->
 	{{ content }}
     <!-- End Main Content -->
-	
-	
-	      <div class="large-4 columns">
-
-			      <h5>Latest News</h5>
-			      <ul class="side-nav">
-			          {% for post in site.posts limit:10 %}
-			          	{% if post.isproject != true %}
-					      <li><a href="{{ post.url }}">{{ post.title }} &nbsp; ({{post.date | date: '%B %d, %Y'}})</a></li>
-					    {% endif %}
-					  {% endfor %}
-			      </ul>
-	      </div>
-	      <!-- End Content -->
-	    </div>
-	  </div>
-	</div>
 
 	<!-- Footer Begin-->
 	{% include footer.html %} 

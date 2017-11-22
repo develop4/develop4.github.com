@@ -1,13 +1,14 @@
-<header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
+ 
+ <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
 	<div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger {{^sidebaronly}}md-hide lg-hide{{/sidebaronly}} pr2">☰</div>
-	<a href="/" class="text-decoration-none inline-block mx-auto"> 
-		<div class="h3 bold caps mx-auto {{classes}}">{{ site.company }}</div>
-	</a>
+	<a href="/index.html" class="text-decoration-none inline-block mx-auto"> 
+		<div class="h3 bold caps mx-auto">{{ site.company }}</div>
+	</a>	
 	<nav class="ampstart-headerbar-nav ampstart-nav xs-hide sm-hide">
 		<ul class="list-reset m0 p0 flex justify-center nowrap">
 			{% for menu in site.data.menu %}
-			<li class="ampstart-nav-item {% if page.title == menu.name %}www-current-page{% endif %}">
-				<a href="{{ menu.url }}" class="text-decoration-none block">{{ menu.name }}</a>
+			<li class="ampstart-nav-item {% if page.title == menu.name or page.crumb == menu.name %}www-current-page{% endif %}">
+				<a href="{{ menu.url }}" class="text-decoration-none block bold">{{ menu.name }}</a>
 			</li>
 			{% endfor %}			
 		</ul>

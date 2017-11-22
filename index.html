@@ -1,47 +1,35 @@
 ---
 layout: main
 title: Develop4
+crumb: Home
 css: main
 js: main
 description: Develop4 provides consultancy services, and has worked in partnership with government agencies, small businesses and multi-national corporations.
 ---
-<amp-selector layout="container"> 
-<main class="flex pl2"> 
-<aside class="www-components col-1 xs-hide sm-hide relative">.
-</aside>
-<article class="www-components flex-auto col-2">
-			<a class="" href="/"> 
-				<amp-img src="/images/business/business-tech-home.jpg" width="1" height="1" layout="responsive" alt="HomeX">
-				<div fallback>HomeX</div>
-				</amp-img>
-				Home
-			</a> 
-</article>
-<article class="www-components flex-auto col-2">
-			<a class="" href="/Projects"> 
-				<amp-img src="/images/business/business-tech-planning.jpg" width="1" height="1" layout="responsive" alt="Projects">
-				<div fallback>Projects</div>
-				</amp-img>
-				Projects
-			</a> 
-</article>
-<article class="www-components flex-auto col-2">
-			<a class="" href="/Blogs"> 
-				<amp-img src="/images/business/business-tech-blogs.jpg" width="1" height="1" layout="responsive" alt="Blogs">
-				<div fallback>Blogs</div>
-				</amp-img>
-				Blogs
-			</a> 
-</article>
-<article class="www-components flex-auto col-2">
-			<a class="" href="/Contact"> 
-				<amp-img src="/images/business/business-tech-contact.jpg" width="1" height="1" layout="responsive" alt="Contact">
-				<div fallback>Contact</div>
-				</amp-img>
-				Contact
-			</a>
-</article>
-<aside class="www-components col-1 xs-hide sm-hide relative">.
-</aside>
-</main>
+	
+	
+
+{% for post in site.posts limit:10 %}
+{% if post.isproject != true %}
+    <amp-selector layout="container"> 
+	<main class="flex pl2"> 
+	<article class="www-components flex-auto col-12">
+		<section class="www-component-desc">
+			<p class="mb2 px1 left ">
+				<a href="{{ post.url }}" class="">{{ post.blogtitle }}</a>
+				[{{ post.description | strip_html | truncate: 200}}]
+			</p>
+			<br/>
+			<p class="mb2 px1 right">
+				Written by <a href="/team/{{ page.author }}.html">{{ post.author }}</a>, 
+				on {{ post.date | date: '%B %d, %Y' }}
+			</p>
+		</section>
+	</article>
+	</main> 
+	<main class="flex pl2"> 
+	</main>
 </amp-selector>
+
+{% endif %}
+{% endfor %}
