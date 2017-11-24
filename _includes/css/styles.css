@@ -225,46 +225,6 @@ section[expanded].hidden-section .hidden-section-show-more {
   box-shadow: none;
 }
 
-/* experiments */
-
-#experiment-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.amp-experiment-list span:not(:last-of-type)::after {
-  content: ", "
-}
-
-.amp-experiment {
-  padding-right: 24px;
-  background-position: 100% center;
-  background-repeat: no-repeat;
-  background-image: -webkit-image-set(
-  url('/images/ic_experiment_black_1x_web_18dp.png') 1x,
-  url('/images/ic_experiment_black_2x_web_18dp.png') 2x );
-}
-
-.amp-experiment-medium {
-  padding-right: 36px;
-  background-position: 100% center;
-  background-repeat: no-repeat;
-  background-image: -webkit-image-set(
-  url('/images/ic_experiment_black_1x_web_24dp.png') 1x,
-  url('/images/ic_experiment_black_2x_web_24dp.png') 2x );
-}
-
-.amp-experiment-large {
-  padding-right: 44px;
-  background-position: 100% center;
-  background-repeat: no-repeat;
-  background-image: -webkit-image-set(
-  url('/images/ic_experiment_black_1x_web_36dp.png') 1x,
-  url('/images/ic_experiment_black_2x_web_36dp.png') 2x );
-}
-
-
 /* actions */
 
 .gist {
@@ -457,31 +417,3 @@ a.card:active {
   }
 }
 
-input[type=text], input[type=search], input[type=email], input[type=date] {
-  -webkit-appearance: none;
-  border-radius: 0;
-  display: block;
-  margin: 0;
-  width: 100%;
-  text-align: left;
-  color: inherit;
-  outline: none;
-}
-
-.search-input {
-  float: left;
-  border: 1px solid;
-  border-color: #ddd;
-  height: 43px;
-  padding: 0px;
-  font-size: 20px;
-}
-
-.search-input-submit {
-  top: -61px;
-  float: right;
-  font-size: 16px;
-  margin-top: 1px;
-  background-color: rgb(66,133,244);
-  height: 43px
-}
