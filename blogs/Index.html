@@ -1,0 +1,41 @@
+--- 
+layout: normal 
+title: Blogs
+crumb: Blogs 
+summary: Latest Blog posts with usefull information or discussions on topics of interest. 
+--- 
+<amp-selector layout="container"> 
+	<main class="flex pl2"> 
+		<article class="www-components flex-auto col-12">			
+	{% for post in site.posts limit: 20 %} 
+	{% if post.isproject != true %}
+	<div class="flex px1 pt1 col-6 left">
+		<div class="blog-container p1 col-12">
+			<div>
+				{% for category in post.categories %}
+					<span class="blog-post-tag">{{category}}</span>
+				{% endfor %}
+			</div> 
+			<div>
+				<span class="blog-created">on {{post.date | date: '%B %d, %Y'}}</span> / <span class="blog-created">by {{post.author}}</span>
+			</div>
+			<div>
+				<a href="{{ post.url }}">
+					<span class="blog-title">{{post.title}}</span>
+				</a>
+			</div>
+			<p>{{post.summary}}</p>
+		</div>
+	</div>
+	{% endif %} 
+	{% endfor %}
+</article>
+</main>
+<main class="flex pl2"> 
+	<article class="www-components flex-auto col-12 center">		
+		<br/>
+		<a href="/Blogs/blogsfull.html"><span class="blog-title">See the full list of all posts ...</span></a>
+	</article>
+</main>
+</amp-selector>
+<br/>

@@ -116,8 +116,8 @@ code, pre {
 }
 .anchor-img {
   background-image: -webkit-image-set(
-  url(/img/ic_link_black_1x_web_18dp.png) 1x,
-  url(/img/ic_link_black_2x_web_18dp.png) 2x
+  url(/images/ic_link_black_1x_web_18dp.png) 1x,
+  url(/images/ic_link_black_2x_web_18dp.png) 2x
   );
   width: 18px;
   height: 18px;
@@ -198,15 +198,15 @@ section[expanded].hidden-section .hidden-section-show-more {
 
 .hidden-section .hidden-section-show-less {
   background-image: -webkit-image-set(
-    url('/img/ic_indeterminate_check_box_black_24dp_1x.png') 1x,
-    url('/img/ic_indeterminate_check_box_black_24dp_2x.png') 2x
+    url('/images/ic_indeterminate_check_box_black_24dp_1x.png') 1x,
+    url('/images/ic_indeterminate_check_box_black_24dp_2x.png') 2x
   );
 }
 
 .hidden-section .hidden-section-show-more {
   background-image: -webkit-image-set(
-    url('/img/ic_add_box_black_24dp_1x.png') 1x,
-    url('/img/ic_add_box_black_24dp_2x.png') 2x
+    url('/images/ic_add_box_black_24dp_1x.png') 1x,
+    url('/images/ic_add_box_black_24dp_2x.png') 2x
   );
 }
 
@@ -242,8 +242,8 @@ section[expanded].hidden-section .hidden-section-show-more {
   background-position: 100% center;
   background-repeat: no-repeat;
   background-image: -webkit-image-set(
-  url('/img/ic_experiment_black_1x_web_18dp.png') 1x,
-  url('/img/ic_experiment_black_2x_web_18dp.png') 2x );
+  url('/images/ic_experiment_black_1x_web_18dp.png') 1x,
+  url('/images/ic_experiment_black_2x_web_18dp.png') 2x );
 }
 
 .amp-experiment-medium {
@@ -251,8 +251,8 @@ section[expanded].hidden-section .hidden-section-show-more {
   background-position: 100% center;
   background-repeat: no-repeat;
   background-image: -webkit-image-set(
-  url('/img/ic_experiment_black_1x_web_24dp.png') 1x,
-  url('/img/ic_experiment_black_2x_web_24dp.png') 2x );
+  url('/images/ic_experiment_black_1x_web_24dp.png') 1x,
+  url('/images/ic_experiment_black_2x_web_24dp.png') 2x );
 }
 
 .amp-experiment-large {
@@ -260,8 +260,8 @@ section[expanded].hidden-section .hidden-section-show-more {
   background-position: 100% center;
   background-repeat: no-repeat;
   background-image: -webkit-image-set(
-  url('/img/ic_experiment_black_1x_web_36dp.png') 1x,
-  url('/img/ic_experiment_black_2x_web_36dp.png') 2x );
+  url('/images/ic_experiment_black_1x_web_36dp.png') 1x,
+  url('/images/ic_experiment_black_2x_web_36dp.png') 2x );
 }
 
 
@@ -270,15 +270,15 @@ section[expanded].hidden-section .hidden-section-show-more {
 .gist {
   background-position: right 8px center;
   background-repeat: no-repeat;
-  background-image: url(/img/gist.png);
+  background-image: url(/images/gist.png);
 }
 
 .show-preview {
   background-position: right 8px center;
   background-repeat: no-repeat;
   background-image: -webkit-image-set(
-  url(/img/ic_play_circle_filled_black_1x_web_24dp.png) 1x,
-  url(/img/ic_play_circle_filled_black_2x_web_24dp.png) 2x
+  url(/images/ic_play_circle_filled_black_1x_web_24dp.png) 1x,
+  url(/images/ic_play_circle_filled_black_2x_web_24dp.png) 2x
   );
 }
 /* footer */

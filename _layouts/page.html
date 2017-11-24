@@ -4,24 +4,9 @@
 	{% include head.html %}
 </head>
 <body>
-	<!-- Header Begin -->
 	{% include navbar.html %}
-    {% include header.html %}
-	
-	<!-- Header End -->
-	<!-- Main Page Content and Sidebar Begin-->
-	<div class="row bar-shadow white">
-		<br>
-		<!-- Main Main Content Begin -->
-		<div class="large-0 columns">&nbsp;</div>
-		<div class="large-12 columns" role="content">{{ content }}</div>
-		<div class="large-0 columns">&nbsp;</div>
-		<!-- Main Content End -->
-	</div>
-	<!-- Main Content and Sidebar End -->
-	
-	<!-- Footer Begin-->
+	{% include header.html %}
+	{{ content }}
 	{% include footer.html %} 
-	<!-- Footer End -->
 </body>
 </html>

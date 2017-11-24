@@ -6,13 +6,18 @@
 	</a>	
 	<nav class="ampstart-headerbar-nav ampstart-nav xs-hide sm-hide">
 		<ul class="list-reset m0 p0 flex justify-center nowrap">
-			{% for menu in site.data.menu %}
-			<li class="ampstart-nav-item {% if page.title == menu.name or page.crumb == menu.name %}www-current-page{% endif %}">
-				<a href="{{ menu.url }}" class="text-decoration-none block bold">{{ menu.name }}</a>
+			{% for item in site.data.navigation %}
+			{% if page.title == item.name or page.crumb == item.name %}
+			{%    assign selected = 'www-current-page' %}
+			{% else %}
+			{%    assign selected = '' %}
+			{% endif %}
+			<li class="ampstart-nav-item {{selected}}">
+				<a href="{{ item.url }}" class="text-decoration-none block bold">{{ item.name }}</a>
 			</li>
 			{% endfor %}			
 		</ul>
-	</nav>
+	</nav> 
 </header>
 
  <amp-sidebar id="header-sidebar" class="ampstart-sidebar px3 flex flex-column md-hide lg-hide" layout="nodisplay">
@@ -20,14 +25,14 @@
      <a href="#" on="tap:header-sidebar.toggle"class="ampstart-navbar-trigger items-start">✕</a>
    </div>
    <nav class="ampstart-sidebar-nav ampstart-nav">
-     {% for menu in site.data.menu %}
-    		<a href="{{ menu.url }}" class="block caps h4 py1 abe-primary {% if page.title == menu.name %}black{% endif %}">{{ menu.name }}</a>
-		{% if menu.submenu %}
+     {% for item in site.data.navigation %}
+    		<a href="{{ item.url }}" class="block caps h4 py1 abe-primary">{{ item.name }}</a>
+		{% if item.submenu %}
 		<ul class="list-reset m0 p0 caps h5">
           <li class="ampstart-nav-item ampstart-nav-dropdown relative">
               <ul class="ampstart-dropdown-items list-reset m0 p0">
-              {% for submenu in menu.submenu %}
-                <li class="ampstart-dropdown-item"><a href="{{ submenu.url }}" class="text-decoration-none">- {{ submenu.name }}</a></li>
+              {% for subitem in item.submenu %}
+                <li class="ampstart-dropdown-item"><a href="{{ subitem.url }}" class="text-decoration-none">- {{ subitem.name }}</a></li>
               {% endfor %}
               </ul>
         	</li>

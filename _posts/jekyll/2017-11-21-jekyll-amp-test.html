@@ -3,122 +3,112 @@ layout: posts
 title: Jekyll AMP Test 
 blogtitle: Jekyll AMP Test 
 crumb: Blogs
-author: William Timpany 
-categories: [ Jekyll, Programming] 
-description: dsjpfo jdsfp podsfj sdof podfpo sdpof jsdpofj.
-
+author: wtimpany 
+tags: [ Jekyll , Programming, AMP]
+categories: [ Jekyll ]
+summary: dsjpfo jdsfp podsfj sdof podfpo sdpof jsdpofj.
 ---
-<aside class="www-components-sec-nav col-2 xs-hide sm-hide relative">
-	<ul class="www-component-anchors list-reset m0 p0 px1 caps">
-		<li class="clearfix mb3"><a href="#introduction" class="www-component-anchor text-decoration-none left" option="introduction"> Introduction</a></li>
-		<li class="clearfix mb3"><a href="#head" class="www-component-anchor text-decoration-none left" option="head"> Head</a></li>
-		<li class="clearfix mb3"><a href="#body" class="www-component-anchor text-decoration-none left" option="body"> Body</a></li>
-	</ul>
-</aside>
-<article class="www-components flex-auto col-10">
-	<section class="www-component-desc">
-		<h2 id="introduction" class="www-heading pb4 mb2 relative h3">Introduction</h2>
-		<p class="mb2 px1">An AMP HTML tutorial - learn the different building blocks of an AMP HTML file. AMP HTML is entirely built on existing web technologies. It achieves reliable performance by
-			restricting some parts of HTML, CSS and JavaScript. To make up for those limitations AMP HTML defines a set of custom elements for rich content beyond basic HTML. This samples shows what&#39;s
-			necessary to create a valid AMP HTML file.</p>
-	</section>
-	<section class="www-component-desc">
-		<p class="mb2 px1">Doctype declaration is required.</p>
-		<div class="abe-code-container">
-			<div class="abe-code-preview ampstart-card mb1">
-				<div class="abe-code fit px1 pb1 p1  ">
-					<pre class="hljs html p0 m0">
-						<span class="hljs-meta">&lt;!doctype html&gt;</span>
-					</pre>
-				</div>
+<section class="www-component-desc">
+	<h2 id="introduction" class="www-heading pb4 mb2 relative h3">Introduction</h2>
+	<p class="mb2 px1">An AMP HTML tutorial - learn the different building blocks of an AMP HTML file. AMP HTML is entirely built on existing web technologies. It achieves reliable performance by
+		restricting some parts of HTML, CSS and JavaScript. To make up for those limitations AMP HTML defines a set of custom elements for rich content beyond basic HTML. This samples shows what&#39;s
+		necessary to create a valid AMP HTML file.</p>
+</section>
+<section class="www-component-desc">
+	<p class="mb2 px1">Doctype declaration is required.</p>
+	<div class="abe-code-container">
+		<div class="abe-code-preview ampstart-card mb1">
+			<div class="abe-code fit px1 pb1 p1  ">
+				<pre class="hljs html p0 m0">
+					<span class="hljs-meta">&lt;!doctype html&gt;</span>
+				</pre>
 			</div>
 		</div>
-	</section>
-	<section class="www-component-desc">
-		<p class="mb2 px1">
-			This tells everyone that this is an AMP file.
-			<code>&lt;html amp&gt;</code>
-			works too.
-		</p>
-		<div class="abe-code-container">
-			<div class="abe-code-preview ampstart-card mb1">
-				<div class="abe-code fit px1 pb1 p1  ">
-					<pre class="hljs html p0 m0">
-						<span class="hljs-tag">&lt;<span class="hljs-name">html</span> ⚡&gt;</span>
-					</pre>
-				</div>
+	</div>
+</section>
+<section class="www-component-desc">
+	<p class="mb2 px1">
+		This tells everyone that this is an AMP file.
+		<code>&lt;html amp&gt;</code>
+		works too.
+	</p>
+	<div class="abe-code-container">
+		<div class="abe-code-preview ampstart-card mb1">
+			<div class="abe-code fit px1 pb1 p1  ">
+				<pre class="hljs html p0 m0">
+					<span class="hljs-tag">&lt;<span class="hljs-name">html</span> ⚡&gt;</span>
+				</pre>
 			</div>
 		</div>
-	</section>
-	<section class="www-component-desc">
-		<h2 id="head" class="www-heading pb4 mb2 relative h3">Head</h2>
-	</section>
-	<section class="www-component-desc">
-		<p class="mb2 px1">
-			The charset definition must be the first child of the
-			<code>&lt;head&gt;</code>
-			tag.
-		</p>
-		<div class="abe-code-container">
-			<div class="abe-code-preview ampstart-card mb1">
-				<div class="abe-code fit px1 pb1 p1  ">
-					<pre class="hljs html p0 m0">
-						<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
-					</pre>
-				</div>
+	</div>
+</section>
+<section class="www-component-desc">
+	<h2 id="head" class="www-heading pb4 mb2 relative h3">Head</h2>
+</section>
+<section class="www-component-desc">
+	<p class="mb2 px1">
+		The charset definition must be the first child of the
+		<code>&lt;head&gt;</code>
+		tag.
+	</p>
+	<div class="abe-code-container">
+		<div class="abe-code-preview ampstart-card mb1">
+			<div class="abe-code fit px1 pb1 p1  ">
+				<pre class="hljs html p0 m0">
+					<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+				</pre>
 			</div>
 		</div>
-	</section>
-	<section class="www-component-desc">
-		<p class="mb2 px1">
-			The AMP runtime must be loaded as the second child of the
-			<code>&lt;head&gt;</code>
-			tag.
-		</p>
-		<div class="abe-code-container">
-			<div class="abe-code-preview ampstart-card mb1">
-				<div class="abe-code fit px1 pb1 p1  ">
-					<pre class="hljs html p0 m0">
-						<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.ampproject.org/v0.js"</span>&gt;</span><span
-							class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-					</pre>
-				</div>
+	</div>
+</section>
+<section class="www-component-desc">
+	<p class="mb2 px1">
+		The AMP runtime must be loaded as the second child of the
+		<code>&lt;head&gt;</code>
+		tag.
+	</p>
+	<div class="abe-code-container">
+		<div class="abe-code-preview ampstart-card mb1">
+			<div class="abe-code fit px1 pb1 p1  ">
+				<pre class="hljs html p0 m0">
+					<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.ampproject.org/v0.js"</span>&gt;</span><span
+						class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+				</pre>
 			</div>
 		</div>
-	</section>
-	<section class="www-component-desc">
-		<p class="mb2 px1">AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself.</p>
-		<div class="abe-code-container">
-			<div class="abe-code-preview ampstart-card mb1">
-				<div class="abe-code fit px1 pb1 p1  ">
-					<pre class="hljs html p0 m0">
-						<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"canonical"</span> <span class="hljs-attr">href</span>=<span
-							class="hljs-string">"https://ampbyexample.com/introduction/hello_world/"</span>&gt;</span>
-					</pre>
-				</div>
+	</div>
+</section>
+<section class="www-component-desc">
+	<p class="mb2 px1">AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself.</p>
+	<div class="abe-code-container">
+		<div class="abe-code-preview ampstart-card mb1">
+			<div class="abe-code fit px1 pb1 p1  ">
+				<pre class="hljs html p0 m0">
+					<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"canonical"</span> <span class="hljs-attr">href</span>=<span
+						class="hljs-string">"https://ampbyexample.com/introduction/hello_world/"</span>&gt;</span>
+				</pre>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<section class="www-component-desc">
-		<h2 id="body" class="www-heading pb4 mb2 relative h3">Body</h2>
-	</section>
-	<section class="www-component-desc">
-		<p class="mb2 px1">Most HTML tags can be used directly in AMP HTML.</p>
-		<div class="abe-code-container">
-			<div class="abe-code-preview ampstart-card mb1">
-				<h3 class="abe-code px1 pt1 caps h4 mb1">Example</h3>
-				<div class="abe-preview fit mb1">
-					<h1>Hello World!</h1>
+<section class="www-component-desc">
+	<h2 id="body" class="www-heading pb4 mb2 relative h3">Body</h2>
+</section>
+<section class="www-component-desc">
+	<p class="mb2 px1">Most HTML tags can be used directly in AMP HTML.</p>
+	<div class="abe-code-container">
+		<div class="abe-code-preview ampstart-card mb1">
+			<h3 class="abe-code px1 pt1 caps h4 mb1">Example</h3>
+			<div class="abe-preview fit mb1">
+				<h1>Hello World!</h1>
 
-				</div>
-				<div class="abe-code fit px1 pb1   ">
-					<pre class="hljs html p0 m0">
-						<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-					</pre>
-				</div>
+			</div>
+			<div class="abe-code fit px1 pb1   ">
+				<pre class="hljs html p0 m0">
+					<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+				</pre>
 			</div>
 		</div>
-	</section>
-	
-</article>
+	</div>
+</section>

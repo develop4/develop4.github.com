@@ -4,24 +4,9 @@
 	{% include head.html %}
 </head>
 <body>
-	<!-- Header Begin -->
 	{% include navbar.html %}
-    <header class="www-header">
-      <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">{{page.title}}</h1>
-      <span class="h3 block mb4 px2 col-12 sm-col-8 mx-auto">{{page.description}}</span>
-    </header>
- 
-	<!-- Main Page Content and Sidebar Begin -->
-	<div class="row bar-shadow white">
-		<br>
-		<!-- Main Content Begin -->
-		<div class="large-9 columns" role="content">{{ content }}</div>
-		<!-- Main Content End-->
-	</div>
-	<!-- Main Content and Sidebar End -->
-
-	<!-- Footer Begin-->
+	{% include header.html %}
+	{{ content }}
 	{% include footer.html %} 
-	<!-- Footer End -->
 </body>
 </html>

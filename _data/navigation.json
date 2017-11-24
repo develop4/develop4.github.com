@@ -1,0 +1,46 @@
+[
+	{ 
+		"name": "Home",
+		"url":  "/index.html",
+		"desc": "Home"
+	},
+	{ 
+		"name": "Projects",
+		"url":  "/projects",
+		"desc": "Projects",
+		"submenu": [
+			{ 
+				"name": "Develop4 Web Site",
+				"url":  "/projects/2017/07/21/develop4_web_site.html",
+				"desc": "Develop4 Web Site"
+			},
+			{ 
+				"name": "Tomcat Security",
+				"url":  "/projects/2017/07/21/tomcat_security_extension.html",
+				"desc": "Tomcat Security Extension"
+			}
+		]
+	},
+	{
+		"name": "Blogs",
+		"url":  "/blogs",
+		"desc": "Blog Entries",
+		"submenu": [
+			{ 
+				"name": "Categories",
+				"url":  "/Blogs/categories.html",
+				"desc": "Categories"
+			},
+			{ 
+				"name": "Tags",
+				"url":  "/Blogs/tags.html",
+				"desc": "Tags"
+			}
+		]
+	},
+	{
+		"name": "Contact",
+		"url":  "/contact",
+		"desc": "Contact Details"
+	}  
+]

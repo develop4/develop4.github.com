@@ -4,19 +4,9 @@
 	{% include head.html %}
 </head>
 <body>
-	<!-- Header Begin -->
 	{% include navbar.html %}
-    <header class="www-header">
-      <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">{{page.title}}</h1>
-      <span class="h3 block mb4 px2 col-12 sm-col-8 mx-auto">{{page.description}}</span>
-    </header>
-
-	<!-- Main Main Content -->
+	{% include header.html %}
 	{{ content }}
-    <!-- End Main Content -->
-
-	<!-- Footer Begin-->
 	{% include footer.html %} 
-	<!-- Footer End -->
 </body>
 </html>

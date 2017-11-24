@@ -1,13 +1,10 @@
-<title>{{title}}</title>
-<meta name="description" content="{{desc}}" />
-{{^skipCanonical}}
-<link rel="canonical" href="{{canonical}}">
-{{/skipCanonical}}
-
+<title>{{page.title}}</title>
+<meta name="description" content="{{page.summary}}" />
+<link rel="canonical" href="{{page.url}}">
 <!-- Schema.org markup for Google+ -->
-<meta itemprop="name" content="{{title}}">
-<meta itemprop="description" content="{{desc}}">
-<meta itemprop="image" content="{{leader}}">
+<meta itemprop="name" content="{{page.title}}">
+<meta itemprop="description" content="{{page.summary}}">
+<meta itemprop="image" content="{{page.leader}}">
 {{#categories}}{{#selected}}
 
 <script type="application/ld+json">
@@ -25,8 +22,8 @@
       "@type": "ListItem",
       "position": 2,
       "item": {
-        "@id": "{{host}}{{url}}",
-        "name": "{{title}}"
+        "@id": "{{host}}{{page.url}}",
+        "name": "{{page.title}}"
       }
     }{{/selected}}{{/examples}}]
   }
@@ -34,21 +31,21 @@
 {{/selected}}{{/categories}}
 
 <!-- Twitter Card data -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="page.summary">
 <meta name="twitter:site" content="@amphtml">
-<meta name="twitter:creator" content="@sebabenz">
-<meta name="twitter:title" content="{{title}}">
-<meta name="twitter:description" content="{{desc}}">
-<meta name="twitter:image" content="{{leader}}">
-<meta name="twitter:image:alt" content="AMP by Example">
+<meta name="twitter:creator" content="@TechDevelop4">
+<meta name="twitter:title" content="{{page.title}}">
+<meta name="twitter:description" content="{{page.summary}}">
+<meta name="twitter:image" content="{{page.leader}}">
+<meta name="twitter:image:alt" content="{{site.company}}">
 
 <!-- Open Graph data -->
-<meta property="fb:app_id" content="254325784911610" />
-<meta property="og:title" content="{{title}}" />
+<meta property="fb:app_id" content="999999999999" />
+<meta property="og:title" content="{{page.title}}" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="{{leader}}" />
-<meta property="og:url" content="{{canonical}}" />
-<meta property="og:description" content="{{desc}}" />
-<meta property="og:site_name" content="AMP by Example" />
-<meta property="article:published_time" content="{{datePublished}}" />
-<meta property="article:modified_time" content="{{dateModified}}" />
+<meta property="og:image" content="{{page.leader}}" />
+<meta property="og:url" content="{{page.url}}" />
+<meta property="og:description" content="{{page.summary}}" />
+<meta property="og:site_name" content="{{site.company}}" />
+<meta property="article:published_time" content="{{{{ post.date | date: '%B %d, %Y' }}}}" />
+<meta property="article:modified_time" content="{{{{ post.date | date: '%B %d, %Y' }}}}" />
