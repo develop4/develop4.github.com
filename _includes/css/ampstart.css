@@ -76,17 +76,11 @@
 }
 
 
-@
--webkit-keyframes a {
-	to {opacity: 1
+@-webkit-keyframes a { 
+	to {opacity: 1 }
 }
-
-}
-@
-keyframes a {
-	to {opacity: 1
-}
-
+@keyframes a {
+	to {opacity: 1 }
 }
 
 
