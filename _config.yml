@@ -9,3 +9,6 @@ company: Develop4
 name: Develop4 Ltd.
 registration: 04598288
 topbartitle: [ Develop4 ]
+
+tag_page: '/blogs/tags.html'
+category_page: '/blogs/categories.html'
