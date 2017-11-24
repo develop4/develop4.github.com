@@ -28,12 +28,12 @@
 		"submenu": [
 			{ 
 				"name": "Categories",
-				"url":  "/Blogs/categories.html",
+				"url":  "/blogs/categories.html",
 				"desc": "Categories"
 			},
 			{ 
 				"name": "Tags",
-				"url":  "/Blogs/tags.html",
+				"url":  "/blogs/tags.html",
 				"desc": "Tags"
 			}
 		]
