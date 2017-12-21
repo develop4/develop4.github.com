@@ -9,7 +9,7 @@ summary: Posts organized by Tag.
 <article class="www-components flex-auto col-12">		
 	{% assign sorted_items = site.tags | sort %}
 	{% for item in sorted_items %}
-		<a href="#{{ item[0] | slugify }}" class="blog-post-tag">{{ item[0] }}</a>
+		<a href="#tag-{{ item[0] | slugify }}" class="blog-post-tag">{{ item[0] }}</a>
 	{% endfor %}
 </article>
 </main>
@@ -22,15 +22,15 @@ summary: Posts organized by Tag.
 <article class="www-components flex-auto col-12">	
 	{% assign sorted_items = site.tags | sort %}
     {% for item in sorted_items %}
-    <h2 id="{{ item[0] | slugify }}">{{ item[0] }}</h2>
+    <h2 id="tag-{{ item[0] | slugify }}">{{ item[0] }}</h2>
     <ul>
       {% for post in item[1] %}
       <li>
 	      <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-			<span class="bold">{{post.title}}</span>				
+			<span class="blog-title">{{post.title}}</span>				
 			<span class="blog-created"> - on {{post.date | date: '%B %d, %Y'}} / by {{post.author}}</span>
 	      </a>
-      </li>
+	  </li>
       {% endfor %}
       </ul>
     {% endfor %}

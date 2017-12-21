@@ -1,20 +1,30 @@
 --- 
-layout: normal
+layout: page
 title: Blogs
 crumb: Blogs
 summary: Latest Blog posts with usefull information or discussions on topics of interest. 
 --- 
 <amp-selector layout="container"> 
+<main class="flex pl2"> 
+	<article class="www-components flex-auto col-12">		
+		<br/>
+		View All posts organized by: 
+		<a href="/blogs/categories.html"><span class="blog-title">Category</span></a> -
+		<a href="/blogs/tags.html"><span class="blog-title">Tag</span></a>
+	</article>
+</main>
 	<main class="flex pl2"> 
 		<article class="www-components flex-auto col-12">			
 	{% for post in site.posts limit: 20 %} 
 	{% if post.isproject != true %}
-	<div class="flex px1 pt1 col-6 left">
-		<div class="blog-container p1 col-12">
+	<div class="flex px1 pt1 col-12 left">
+		<div class="col-1">
+		</div>
+		<div class="blog-container p1 col-10">
 			<div>
 				{% assign sorted_items = post.tags | sort %}
 				{% for item in sorted_items %}
-					<span class="blog-post-tag">{{item}}</span>
+					<a href="{{site.tag_page}}#{{ item | slugify }}" class="blog-post-tag">{{ item }}</a>
 				{% endfor %}
 			</div> 
 			<div>
@@ -27,17 +37,19 @@ summary: Latest Blog posts with usefull information or discussions on topics of 
 			</p>
 			<p>{{post.summary}}</p>
 		</div>
+		<div class="col-1">
+		</div>
 	</div>
 	{% endif %} 
 	{% endfor %}
 </article>
 </main>
 <main class="flex pl2"> 
-	<article class="www-components flex-auto col-12 center">		
+	<article class="www-components flex-auto col-12">		
 		<br/>
 		All posts organized by: 
-		[<a href="/blogs/categories.html"><span class="bold">Category</span></a>] -
-		[<a href="/blogs/tags.html"><span class="bold">Tag</span></a>]
+		<a href="/blogs/categories.html"><span class="blog-title">Category</span></a> -
+		<a href="/blogs/tags.html"><span class="blog-title">Tag</span></a>
 	</article>
 </main>
 </amp-selector>

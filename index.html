@@ -1,10 +1,10 @@
 ---
-layout: main
+layout: page
 title: Develop4
 crumb: Home
 css: main
 js: main
-summary: Develop4 provides consultancy services, and has worked in partnership with government agencies, small businesses and multi-national corporations.
+summary: Develop4 provides consultancy services, working in partnership with government agencies, small businesses and multi-national corporations.
 ---
 
 <amp-selector layout="container"> 
@@ -12,12 +12,14 @@ summary: Develop4 provides consultancy services, and has worked in partnership w
 		<article class="www-components flex-auto col-12">			
 			{% for post in site.posts limit: 20 %} 
 			{% if post.isproject != true %}
-			<div class="flex px1 pt1 col-6 left">
-				<div class="blog-container p1 col-12">
+			<div class="flex px1 pt1 col-12">
+				<div class="flex px1 pt1 col-1 left">
+				</div>
+				<div class="blog-container p1 col-10">
 					<div>
 						{% assign sorted_items = post.tags | sort %}
 						{% for item in sorted_items %}
-							<span class="blog-post-tag">{{item}}</span>
+							<a href="{{site.tag_page}}#tag-{{ item| slugify }}" class="blog-post-tag">{{ item }}</a>
 						{% endfor %}
 					</div> 
 					<div>
@@ -30,9 +32,11 @@ summary: Develop4 provides consultancy services, and has worked in partnership w
 					</p>
 					<p>{{post.summary}}</p>
 				</div>
+				<div class="flex px1 pt1 col-1 left">
+				</div>
 			</div>
 			{% endif %} 
-			{% endfor %}
+			{% endfor %} 
 		</article>
 	</main>
 </amp-selector>
